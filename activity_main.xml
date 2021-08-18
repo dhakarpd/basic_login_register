@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Relative Layout- Layout where each view can be specified in positions relative to
+    sibling or parent Relative layout area; this layout may help eliminating nested
+    view groups and make layout hierarchy flat
+    Also u may replace several nested LinearLayout by single relative layout-->
+
+<!--xmlns -namespace; android -prefix; link -URI; so without this line android related tags
+    won't br identified in xml document of our layout; also this line helps avoid naming
+    conflicts between two attributes with same name but different prefixes-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/fblogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/fb"
+        />
+
+    <EditText
+        android:id="@+id/reguname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="User Name"
+        android:layout_below="@id/fblogo"/>
+
+    <EditText
+        android:id="@+id/regpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reguname"
+        android:layout_marginTop="30dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/password_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:textColor="#4F42B5"
+        android:layout_below="@+id/regpass"
+        tools:text="TextView" />
+
+    <EditText
+        android:id="@+id/regrepass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_hint"
+        android:layout_marginTop="10dp"
+        android:hint="ReType Password"
+        android:inputType="textPassword" />
+
+
+    <!--background tint to add a tint(shade) to background of that button-->
+    <Button
+        android:id="@+id/btnsignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/regrepass"
+        android:layout_marginTop="30dp"
+        android:text="Register"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/design_default_color_background"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/btnregsignin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnsignup"
+        android:layout_marginTop="20dp"
+        android:text="Exixting user go to signin Page"
+        android:textStyle="bold"
+        android:background="@null"
+        android:textColor="@color/colorPrimaryDark"
+        android:padding="10dp"/>
+
+
+
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <EditText
+            android:id="@+id/uname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="User Name" />
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/reg_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:padding="10dp"
+            android:text="Register"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+    -->
+</RelativeLayout>

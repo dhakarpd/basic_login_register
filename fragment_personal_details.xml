@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".PersonalDetailsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <EditText
+        android:id="@+id/fname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="First Name" />
+
+    <EditText
+        android:id="@+id/lname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Last Name"
+        android:layout_below="@+id/fname"/>
+
+    <EditText
+        android:id="@+id/mailid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Email Address"
+        android:layout_below="@+id/lname"
+        android:inputType="textEmailAddress"
+        />
+
+    <TextView
+        android:id="@+id/countrycode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+91 -"
+        android:textSize="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/mailid"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/design_default_color_primary"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile No."
+        android:layout_below="@+id/mailid"
+        android:layout_marginTop="22dp"
+        android:layout_toRightOf="@+id/countrycode"/>
+
+    <TextView
+        android:id="@+id/bgtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/countrycode"
+        android:text="Blood Group -   "
+        android:textSize="25dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/design_default_color_primary"/>
+
+    <!-- static -->
+    <!--A Drop Down menu for blood group using android:entries attribute in
+        spinner widget-->
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/countrycode"
+        android:layout_toRightOf="@+id/bgtext"
+        android:layout_marginTop="35dp"
+        android:entries="@array/blood_group" />
+</RelativeLayout>

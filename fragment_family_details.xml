@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".FamilyDetailsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/fathername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Father's Name" />
+
+    <EditText
+        android:id="@+id/fatherjob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Father's Occupation"
+        android:layout_below="@+id/fathername"/>
+
+    <EditText
+        android:id="@+id/mothername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Mother's Name"
+        android:layout_below="@+id/fatherjob"/>
+
+    <EditText
+        android:id="@+id/motherjob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Mother's Occupation"
+        android:layout_below="@+id/mothername"
+        />
+
+    <EditText
+        android:id="@+id/familycount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Number of Family Members"
+        android:layout_below="@+id/motherjob"
+        android:inputType="number"/>
+
+</RelativeLayout>

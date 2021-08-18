@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--ScrollView is a view group that is used to make vertically scrollable views. A scroll view
+    contains a single direct child only. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EducationDetailsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/choice"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="Have You completed Post Graduation"
+            android:textSize="30dp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/design_default_color_primary"/>
+
+        <Button
+            android:id="@+id/pgbtnchoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click if Yes"
+            android:padding="5dp"
+            android:layout_marginTop="60dp"
+            android:layout_toRightOf="@+id/choice"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="@android:color/holo_orange_light"/>
+
+        <EditText
+            android:id="@+id/pgcgpa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CGPA/Percentage"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            android:layout_below="@+id/choice"/>
+
+        <EditText
+            android:id="@+id/pgcollege"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CGPA/Percentage"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            android:layout_below="@+id/pgcgpa"/>
+
+
+        <TextView
+            android:id="@+id/undergrad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UnderGraduation Details"
+            android:textSize="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/pgcollege"
+            android:textStyle="bold"
+            android:textColor="@color/design_default_color_primary"/>
+
+        <EditText
+            android:id="@+id/ugmarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="CGPA/%"
+            android:layout_below="@+id/undergrad"/>
+
+        <EditText
+            android:id="@+id/ugbranch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="Branch Name"
+            android:layout_below="@+id/ugmarks"/>
+
+        <EditText
+            android:id="@+id/ugcollege"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="College Name"
+            android:layout_below="@+id/ugbranch"/>
+
+        <TextView
+            android:id="@+id/hscboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ugcollege"
+            android:text="HSC/XII Board Details"
+            android:textSize="30dp"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            android:textColor="@color/design_default_color_primary"/>
+
+        <EditText
+            android:id="@+id/hscmarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="CGPA/%"
+            android:layout_below="@+id/hscboard"/>
+
+        <EditText
+            android:id="@+id/hsccollege"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="College/School Name"
+            android:layout_below="@+id/hscmarks"/>
+
+        <TextView
+            android:id="@+id/sscboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hsccollege"
+            android:text="SSC/X Board Details"
+            android:textSize="30dp"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            android:textColor="@color/design_default_color_primary"/>
+
+        <EditText
+            android:id="@+id/sscmarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="CGPA/%"
+            android:layout_below="@+id/sscboard"/>
+
+        <EditText
+            android:id="@+id/sscschool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="School Name"
+            android:layout_below="@+id/sscmarks"/>
+
+    </RelativeLayout>
+
+</ScrollView>

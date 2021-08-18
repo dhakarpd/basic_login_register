@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Linear Layout- This layout aligns(orientation) all children in one direction either
+    vertical or horizontal-->
+
+<!--TabLayout- It provides horizontal layout to display tabs on screen. We can display more screens
+    in single screen using tabs-->
+
+<!--ViewPager2- displays views or fragments in swipable format; it also uses recycler view
+
+    Recycler View- It is a container for displaying large datasets which can be scrolled efficiently
+    by maintaining limited no. of views, which is achieved by recycling views which are out of
+    visibility of user-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SecondActivity">
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.viewpager2.widget.ViewPager2
+
+            android:id="@+id/view_pager_2"
+            android:layout_width="match_parent"
+            android:layout_weight="0.8"
+            android:layout_height="0dp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="49dp"
+            />
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="150dp"
+            android:textSize="20dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:padding="2dp"
+            android:text="Submit"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
